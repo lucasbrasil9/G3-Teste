@@ -1,0 +1,51 @@
+.p1 {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#input-form {
+    padding: 20px;
+    max-width: 270px;
+    overflow: visible;
+    position: auto;
+}
+
+#input-form input {
+    padding: 20px;
+    font-size: 1.2rem;
+    width: 500px;
+    border-style: none;
+    background-color: #4F6BAC;
+    color: #175d90;
+    overflow: visible;
+}
+
+::placeholder {
+    color: rgb(237, 237, 223);
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+
+.webflow-style-input::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+    right: 0px;
+    height: 4px;
+    background: linear-gradient(to right, #e9e2de, #ece2c9, #ece2c9, #ece2c9, #302928, #181414);
+    background-size: 200% auto;
+    animation: gradient 3s linear infinite;
+    width: 500px;
+}
