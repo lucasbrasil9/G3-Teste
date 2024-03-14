@@ -89,7 +89,7 @@ class Cadastro extends Phaser.Scene {//construção de uma nova cena.
         const nameOkTextButton = this.add.text(
             inputCoords.xposition + inputSize.width + 350 ,
             inputCoords.yposition + inputButton.height + 17.25, ">", {
-            backgroundColor: "#1815B7",
+            backgroundColor: "#d25207",
             fontSize: 20,
             padding: 25
         }
@@ -111,8 +111,11 @@ class Cadastro extends Phaser.Scene {//construção de uma nova cena.
         this.botaoFase1.on('pointerdown', () => this.scene.start("fase2"))
         
         // troca do cursor do mouse
-        this.mouse = this.add.image(480, 240, 'mouse').setScale(0.04).setOrigin(0.15, 0.04).setDepth(5);
+        this.mouse = this.add.image(480, 240, 'mouse').setScale(0.08).setOrigin(0.15, 0.04).setDepth(5);
         this.input.setDefaultCursor('none');
+
+        this.botaoFase1.on('pointerover', () => this.botaoFase1.setScale(2.5))
+        this.botaoFase1.on('pointerout', () => this.botaoFase1.setScale(2))
     }
 
     checarNome(inputNameElement) {

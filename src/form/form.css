@@ -22,8 +22,8 @@
     font-size: 1.2rem;
     width: 500px;
     border-style: none;
-    background-color: #4F6BAC;
-    color: #175d90;
+    background-color: #dac3ac;
+    color: #eda06c;
     overflow: visible;
 }
 
@@ -44,7 +44,7 @@ input:focus {
     bottom: 15px;
     right: 0px;
     height: 8px;
-    background: linear-gradient(to right, #e9e2de, #ece2c9, #ece2c9, #ece2c9, #302928, #181414);
+    background: linear-gradient(to right, #d25207, #ece2c9, #ece2c9, #ece2c9, #302928, #181414);
     background-size: 200% auto;
     animation: gradient 3s linear infinite;
     width: 0px;
