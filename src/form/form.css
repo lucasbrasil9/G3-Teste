@@ -12,7 +12,7 @@
 
 #input-form {
     padding: 20px;
-    max-width: 270px;
+    max-width: 200px;
     overflow: visible;
     position: auto;
 }
@@ -40,12 +40,12 @@ input:focus {
 .webflow-style-input::after {
     content: "";
     position: absolute;
-    left: 20px;
+    left: 130px;
     bottom: 15px;
     right: 0px;
-    height: 4px;
+    height: 8px;
     background: linear-gradient(to right, #e9e2de, #ece2c9, #ece2c9, #ece2c9, #302928, #181414);
     background-size: 200% auto;
     animation: gradient 3s linear infinite;
-    width: 500px;
+    width: 0px;
 }

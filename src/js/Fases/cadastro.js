@@ -21,13 +21,13 @@ class Cadastro extends Phaser.Scene {//construção de uma nova cena.
         //this.load.image('bg_servidor', 'assets/bg_servidor.png');
         //this.load.image('serverBT', 'assets/molde_servidor.png');
         this.load.image('vision1.0', 'assets/vision1.0.png');
-        //this.load.image('invisible_server', 'assets/invisible-server.png');
+        this.load.image('vision1', 'assets/vision1.png');
     }
 
     create() {
 
         this.add.image( larguraJogo / 2, alturaJogo / 2, 'bg_cadastro').setDepth(0);//background
-        this.add.image(200, 250, 'vision1.0').setDepth(0).setScale(0.56);
+        this.add.image(200, 250, 'vision1').setDepth(0).setScale(2);
         this.cursors = this.input.keyboard.createCursorKeys();
         this.returnKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);//enter para enviar o input da caixa de texto.
         this.nomeInserido = false;//variável que contém a informação se um nome foi inserido.
@@ -49,7 +49,7 @@ class Cadastro extends Phaser.Scene {//construção de uma nova cena.
             xposition: (this.game.config.width - inputSize.width) / 3 - inputButton.width,
             yposition: (this.game.config.height - inputSize.height - inputSize.padding * 2) / 2,
         };
-        this.inputName = this.add.dom(inputCoords.xposition, inputCoords.yposition).createFromCache('form').setOrigin(0, 0);
+        this.inputName = this.add.dom(inputCoords.xposition+100, inputCoords.yposition).createFromCache('form').setOrigin(0, 0);
 
         //criar a caixa de diálogo.
         var dialogBox = this.add.graphics();
@@ -87,11 +87,11 @@ class Cadastro extends Phaser.Scene {//construção de uma nova cena.
 
 
         const nameOkTextButton = this.add.text(
-            inputCoords.xposition + inputSize.width + 300,
-            inputCoords.yposition + inputButton.height + 12.25, ">", {
+            inputCoords.xposition + inputSize.width + 350 ,
+            inputCoords.yposition + inputButton.height + 17.25, ">", {
             backgroundColor: "#1815B7",
             fontSize: 20,
-            padding: 14
+            padding: 25
         }
         );
         nameOkTextButton.setInteractive();
@@ -105,20 +105,27 @@ class Cadastro extends Phaser.Scene {//construção de uma nova cena.
         });
 
         //imagem do botão de start, inicialmente escondida.
-        this.botaoFase1 = this.add.image(345, 290, 'start-button').setOrigin(0, 0).setInteractive().setVisible(false);
+        this.botaoFase1 = this.add.image(larguraJogo/2, alturaJogo-300, 'start-button').setInteractive().setVisible(false).setDepth(5).setScale(2);
 
         //botão pressionado redireciona o jogador para próxima cena(fase1).
-        this.botaoFase1.on('pointerdown', function () {
-            if (this.nomeInserido) {
-                this.scene.start('fase1', this.game);
-            }
-        }, this);
+        this.botaoFase1.on('pointerdown', () => this.scene.start("fase2"))
+        
+        // troca do cursor do mouse
+        this.mouse = this.add.image(480, 240, 'mouse').setScale(0.04).setOrigin(0.15, 0.04).setDepth(5);
+        this.input.setDefaultCursor('none');
     }
 
     checarNome(inputNameElement) {
         let name = inputNameElement.getChildByName("name");
         if (name.value != "") {//caso nome seja digitado avançar a página.
-            this.message.setText("Olá " + name.value + "!");//mensagem a ser mostrada contendo o nome do jogador.
+            this.message.setText("");
+            this.botaoFase1.setVisible(true);//mensagem a ser mostrada contendo o nome do jogador.
         }
+    }
+
+    update() {
+        // atualização da posição do cursor personalizado
+        this.mouse.x = this.input.x;
+        this.mouse.y = this.input.y;
     }
 }
