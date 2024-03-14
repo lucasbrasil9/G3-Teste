@@ -56,7 +56,7 @@ class TelaInicial extends Phaser.Scene {
         this.add.image(1755, 1230, 'voltarr').setScale(0.4).setDepth(0);
 
         //Botão volume
-        soundButton = this.add.image(45, 250, 'volume-button-1').setScale(1.5);
+        soundButton = this.add.image(45, 235, 'volume-button-1').setScale(1.5);
         soundButton.setInteractive();
 
         //Botão config
