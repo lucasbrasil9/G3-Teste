@@ -60,7 +60,7 @@ class Quiz extends Phaser.Scene {
         this.quizButton3.setInteractive();
 
         // adiciona o cursor do mouse
-        this.mouse = this.add.image(larguraJogo / 2 + 80, alturaJogo / 3 + 40, 'mouse').setScale(0.04).setOrigin(0.15, 0.04).setDepth(5);
+        this.mouse = this.add.image(larguraJogo / 2 + 80, alturaJogo / 3 + 40, 'mouse').setScale(0.08).setOrigin(0.15, 0.04).setDepth(5);
         this.input.setDefaultCursor('none');
 
         //adiciona o placar e botão de reset

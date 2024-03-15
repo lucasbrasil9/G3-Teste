@@ -31,7 +31,7 @@ class Fase2 extends Phaser.Scene {
         this.add.image(1650, 1200, 'progress-bar-2').setScale(0.5).setDepth(0);
 
         //Trocar cursor.
-        this.mouse = this.add.image(480, 240, 'mouse').setScale(0.04).setOrigin(0.15, 0.04).setDepth(5);
+        this.mouse = this.add.image(480, 240, 'mouse').setScale(0.08).setOrigin(0.15, 0.04).setDepth(5);
         this.input.setDefaultCursor('none');
 
         //cria e configura o botão de próxima imagem.

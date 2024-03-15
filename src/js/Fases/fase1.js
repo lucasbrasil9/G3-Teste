@@ -28,7 +28,7 @@ class Fase1 extends Phaser.Scene {
         
         this.add.image(200, 210, 'vision1').setDepth(0).setScale(2);
 
-        this.mouse = this.add.image(480, 240, 'mouse').setScale(0.04).setOrigin(0.15, 0.04);
+        this.mouse = this.add.image(480, 240, 'mouse').setScale(0.08).setOrigin(0.15, 0.04);
         this.input.setDefaultCursor('none');
 
         var dialogText = this.add.text(400, 80, '', {
