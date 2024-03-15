@@ -6,7 +6,7 @@ class Vision extends Phaser.Scene {
 
     create() {
         //imagem óculos grande
-        this.add.image(400, 300, 'sala4').setScale(0.6).setDepth(2);
+        this.add.image(larguraJogo/2, alturaJogo/2,'sala4').setScale(0.8).setDepth(2);
 
         //Trocar cursor
         this.mouse = this.add.image(480, 240, 'mouse').setScale(0.04).setOrigin(0.15, 0.04).setDepth(3);

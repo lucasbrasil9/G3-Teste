@@ -23,7 +23,7 @@ class TelaTransicao1 extends Phaser.Scene {
         this.add.image(1350, 650, 'sala3').setScale(0.40).setDepth(0);
     }
     onEvent2() {
-        this.add.image(620, 1030, 'sala4').setScale(0.40).setDepth(0);
+        this.add.image(620, 1000, 'sala4').setScale(0.40).setDepth(0);
     }
     onEvent3() {
         this.scene.start("vision");
