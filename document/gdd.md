@@ -420,12 +420,16 @@ Código do menu de configurações.
 
 &nbsp;&nbsp;&nbsp;&nbsp; O código da Vision foi feito com simplicidade, tornando-o facilmente replicável e escalável. Ele foi integrado ao jogo de forma a aparecer em momentos pré-definidos, conforme o progresso do jogador, sem interferir na jogabilidade principal. A interface de interação da Vision foi simplificada, apresentando diálogos de fácil compreensão para atingir um público mais amplo. Seus diálogos são direcionados para auxiliar o jogador a acessar os quizzes e flashcards disponíveis no jogo.
 
-IMAGEM DO CODIGO DA VISION
+<div align="center">
+<sub>Figura 5 - Cadastro com a Vision </sub>
+<img src="../assets/visiongdd.png" width="100%">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp; Além da implementação da Vision, outra adição ao código foi a criação de duas novas cenas de desafio. A primeira cena introduz um quiz, criado para testar o conhecimento do jogador sobre o processo de criação de contas. Já a segunda cena apresenta uma abordagem semelhante a um "carrossel", exibindo informações relevantes sobre o processo de criação de contas da Oracle Academy. Essas adições diversificam os desafios no jogo, e também oferecem aos jogadores momentos de aprendizado e engajamento com o conteúdo educacional da Oracle Academy.
 
 <div align="center">
-<sub>Figura 5 - Imagem do carrosel </sub>
+<sub>Figura 6 - Imagem do carrosel </sub>
 <img src="../assets/cadastro-oracle.png" width="100%">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
@@ -434,7 +438,7 @@ IMAGEM DO CODIGO DA VISION
 &nbsp;&nbsp;&nbsp;&nbsp; Outra mudança de menor escala foi a alteração estética da primeira fase do game e da cutscene dos óculos de realidade virtual.
 
 <div align="center">
-<sub>Figura 6 - Sala de aula tela inicial </sub>
+<sub>Figura 7 - Sala de aula tela inicial </sub>
 <img src="../assets/Nova estetica sala inicial.jpeg" width="100%">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>

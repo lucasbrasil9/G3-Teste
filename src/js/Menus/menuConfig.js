@@ -19,10 +19,10 @@ class MenuConfig extends Phaser.Scene {
         this.input.setDefaultCursor('none');
 
         // botão voltar (PLACEHOLDER)
-        backButton = this.add.image(45, 90, 'config-button').setScale(1).setDepth(8);
+        backButton = this.add.image(45, 90, 'menu-button').setScale(1).setDepth(8);
         backButton.setInteractive();
         backButton.on('pointerdown', () => this.scene.start("TelaInicial"));
-        botaoHover(backButton, 'config-button', 'config-button-2');
+        botaoHover(backButton, 'menu-button', 'menu-button-2');
 
         // imagem de configuração
         this.add.image(larguraJogo / 2, alturaJogo / 2, 'cardConfig').setScale(2).setDepth(0);

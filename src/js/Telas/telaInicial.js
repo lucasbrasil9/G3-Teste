@@ -15,7 +15,7 @@ class TelaInicial extends Phaser.Scene {
         //carregamento das imagens e sprites que serão utilizadas no jogo.
         this.load.image("btnPlay", "assets/jogar.png");
         this.load.image("medalha", "assets/medalha.png");
-        this.load.image("voltar", "assets/voltar.png");
+        this.load.image("progress-bar", "assets/barra de Progresso.png");
         this.load.image("configPH", "assets/configPH.png");
         this.load.image("botao", "assets/botões/botaoCard.png");
         this.load.image("card", "assets/flashcard.gif");
@@ -53,20 +53,19 @@ class TelaInicial extends Phaser.Scene {
         this.add.image(larguraJogo / 2, alturaJogo / 2, 'inicio').setScale(1).setDepth(0);
 
         //barra de progresso.
-        this.add.image(1760, 1220, 'voltar').setScale(0.4).setDepth(0);
+        this.add.image(1650, 1200, 'progress-bar').setScale(0.5).setDepth(0);
 
         //modificação mouse
         this.mouse = this.add.image(480,240,'mouse').setScale(0.08).setOrigin(0.15,0.04).setDepth(3);
         this.input.setDefaultCursor('none');
 
         //botão volume.
-        soundButton = this.add.image(50, 310, 'volume-button-1').setScale(1.3);
+        soundButton = this.add.image(50, 300, 'volume-button-1').setScale(1.3);
         soundButton.setInteractive();
 
         //botão config.
         configButton = this.add.image(50, 120, 'config-button').setScale(1.3);
         configButton.setInteractive();
-        configButton.on('pointerdown', () => this.scene.start("menuConfig"));
 
 
         //botão start.
@@ -79,6 +78,7 @@ class TelaInicial extends Phaser.Scene {
         //botão menu.
         menuButton = this.add.image(50, 210, 'menu-button').setScale(1.3);
         menuButton.setInteractive();
+        menuButton.on('pointerdown', () => this.scene.start("menuConfig"));
 
         //mudar cor dos botões quando o mouse passar por cima.
         botaoHover(startButton, 'oculosoff', 'oculoson');

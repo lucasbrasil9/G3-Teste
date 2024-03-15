@@ -12,7 +12,7 @@ class Cadastro extends Phaser.Scene {//construção de uma nova cena.
         this.load.html("form", "form/form.html");
         this.load.image("play", "assets/jogar.png");
         //this.load.image('telainicial', 'assets/telainicial.png');
-        this.load.image('sala2.2', 'assets/sala2.2.png');
+        //this.load.image('sala2.2', 'assets/sala2.2.png');
         this.load.image('flashcardV1', 'assets/flashcardV1.png');
         this.load.image('flash_card', 'assets/flashCard.png');
         this.load.spritesheet('slide', 'assets/fase2/cadastro-oracle.png', { frameWidth: 730, frameHeight: 590 });
@@ -54,18 +54,18 @@ class Cadastro extends Phaser.Scene {//construção de uma nova cena.
         //criar a caixa de diálogo.
         var dialogBox = this.add.graphics();
         dialogBox.fillStyle(0x000000, 0.8);
-        dialogBox.fillRect(larguraJogo / 5, alturaJogo / 12.7, 1000, 288);
+        dialogBox.fillRect(larguraJogo / 5, alturaJogo / 12.7, 1410, 150);
 
         //texto da caixa de diálogo.
         var dialogText = this.add.text(400, 110, '', {
             fontFamily: 'Arial',
-            fontSize: '43px',
+            fontSize: '35px',
             fill: '#ffffff',
-            wordWrap: { width: 960 }
+            wordWrap: { width: 1400 }
         });
 
         //texto a ser exibido gradualmente.
-        var fullText = "Olá! Que bom que você veio! Eu sou a Vision, serei sua assistente virtual! Irei te guiar durante suas aventuras no site da Oracle Academy, mas antes preciso te conhecer melhor… como eu posso te chamar?"
+        const fullText = "Olá! Que bom que você veio! Eu sou a Vision, serei sua assistente virtual! Irei te guiar durante suas aventuras no site da Oracle Academy, mas antes preciso te conhecer melhor… como eu posso te chamar?"
 
         var currentText = '';
         var index = 0;
@@ -108,7 +108,7 @@ class Cadastro extends Phaser.Scene {//construção de uma nova cena.
         this.botaoFase1 = this.add.image(larguraJogo/2, alturaJogo-300, 'start-button').setInteractive().setVisible(false).setDepth(5).setScale(2);
 
         //botão pressionado redireciona o jogador para próxima cena(fase1).
-        this.botaoFase1.on('pointerdown', () => this.scene.start("fase2"))
+        this.botaoFase1.on('pointerdown', () => this.scene.start("fase1"))
         
         // troca do cursor do mouse
         this.mouse = this.add.image(480, 240, 'mouse').setScale(0.08).setOrigin(0.15, 0.04).setDepth(5);
