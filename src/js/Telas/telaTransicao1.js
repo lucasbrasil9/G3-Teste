@@ -12,7 +12,7 @@ class TelaTransicao1 extends Phaser.Scene {
         this.time.addEvent({ delay: 5000, callback: this.onEvent3, callbackScope: this });
 
         //modificação mouse
-        this.mouse = this.add.image(480, 240,'mouse').setScale(0.04).setOrigin(0.15, 0.04).setDepth(3);
+        this.mouse = this.add.image(480, 240,'mouse').setScale(0.08).setOrigin(0.15, 0.04).setDepth(3);
         this.input.setDefaultCursor('none');
     }
     //funções para usar no .addEvent para fazer a animação do oculos (após o usuario clicar no oculos).

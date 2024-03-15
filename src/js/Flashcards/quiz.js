@@ -46,9 +46,9 @@ class Quiz extends Phaser.Scene {
         this.add.image(larguraJogo / 2, alturaJogo / 2, 'quizBG');
 
         // cria os botões que contém as alternativas
-        this.quizButton1 = this.add.image(larguraJogo / 4 - 50, alturaJogo / 6, 'quiz-button1');
-        this.quizButton2 = this.add.image(larguraJogo / 4 - 50, alturaJogo / 6 + 80, 'quiz-button2');
-        this.quizButton3 = this.add.image(larguraJogo / 4 + 50, alturaJogo / 6 + 160, 'quiz-button3');
+        this.quizButton1 = this.add.image(400, 500, 'quiz-button1').setScale(0.5);
+        this.quizButton2 = this.add.image(larguraJogo / 4 - 50, alturaJogo / 6 + 80, 'quiz-button2').setScale(0.5);
+        this.quizButton3 = this.add.image(larguraJogo / 4 + 50, alturaJogo / 6 + 160, 'quiz-button3').setScale(0.5);
 
         // adiciona interação
         this.quizButton1.setInteractive();

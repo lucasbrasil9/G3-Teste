@@ -9,8 +9,8 @@ class Vision extends Phaser.Scene {
         this.add.image(larguraJogo/2, alturaJogo/2,'sala4').setScale(0.8).setDepth(2);
 
         //Trocar cursor
-        this.mouse = this.add.image(480, 240, 'mouse').setScale(0.04).setOrigin(0.15, 0.04).setDepth(3);
-        this.input.setDefaultCursor('none');
+        this.mouse = this.add.image(480, 240, 'mouse').setScale(0.08).setOrigin(0.15, 0.04).setDepth(3);
+        this.input.setDefaultCursor('none');                    
 
         //delay para ir para proxima cena
         this.time.addEvent({ delay: 5000, callback: this.onEvent4, callbackScope: this });
