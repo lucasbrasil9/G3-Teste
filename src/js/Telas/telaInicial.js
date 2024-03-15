@@ -37,9 +37,9 @@ class TelaInicial extends Phaser.Scene {
         this.load.image('oculosoff', 'assets/Oculos1.png');
         this.load.image('oculoson', 'assets/Oculos2.png');
         this.load.image('sala1', 'assets/sala1.png');
-        this.load.image('sala2', 'assets/sala2.png');
-        this.load.image('sala3', 'assets/sala3.png');
-        this.load.image('sala4', 'assets/sala4.png');
+        this.load.image('sala2', 'assets/sala2.jpg');
+        this.load.image('sala3', 'assets/sala3.jpg');
+        this.load.image('sala4', 'assets/sala4.jpg');
         this.load.image('salaescura', 'assets/salaescura.png');
         this.load.image('visionacademy', 'assets/vision.png');
         this.load.image('construcao', 'assets/construcao.png');
