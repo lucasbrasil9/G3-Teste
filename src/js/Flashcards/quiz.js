@@ -29,6 +29,7 @@ class Quiz extends Phaser.Scene {
     // pré-carregamento das imagens do jogo
     preload() {
         this.load.image('quizBG', 'assets/quizBG.png');
+        this.load.image('server-bg', 'assets/servidorCard.jpg');
         this.load.image('quiz-button1', 'assets/botões/Gameflow1.png');
         this.load.image('quiz-button2', 'assets/botões/Gameflow2.png');
         this.load.image('quiz-button3', 'assets/botões/Gameflow3.png');
@@ -43,12 +44,15 @@ class Quiz extends Phaser.Scene {
     // criação dos elementos da cena
     create() {
         // background com a pergunta 
-        this.add.image(larguraJogo / 2, alturaJogo / 2, 'quizBG');
+        this.add.image(larguraJogo / 2, alturaJogo / 2, 'quizBG').setDepth(1);
+
+        // server borrado
+        this.add.image(larguraJogo / 2, alturaJogo / 2, 'server-bg').setDepth(0);
 
         // cria os botões que contém as alternativas
-        this.quizButton1 = this.add.image(400, 500, 'quiz-button1').setScale(0.5);
-        this.quizButton2 = this.add.image(larguraJogo / 4 - 50, alturaJogo / 6 + 80, 'quiz-button2').setScale(0.5);
-        this.quizButton3 = this.add.image(larguraJogo / 4 + 50, alturaJogo / 6 + 160, 'quiz-button3').setScale(0.5);
+        this.quizButton1 = this.add.image(950, 460, 'quiz-button1').setScale(1.4).setDepth(2);
+        this.quizButton2 = this.add.image(950, 750, 'quiz-button2').setScale(1.4).setDepth(2);
+        this.quizButton3 = this.add.image(950, 1050, 'quiz-button3').setScale(1.4).setDepth(2);
 
         // adiciona interação
         this.quizButton1.setInteractive();
@@ -56,13 +60,13 @@ class Quiz extends Phaser.Scene {
         this.quizButton3.setInteractive();
 
         // adiciona o cursor do mouse
-        this.mouse = this.add.image(larguraJogo / 2 + 80, alturaJogo / 3 + 40, 'mouse').setScale(0.04).setOrigin(0.15, 0.04).setDepth(3);
+        this.mouse = this.add.image(larguraJogo / 2 + 80, alturaJogo / 3 + 40, 'mouse').setScale(0.04).setOrigin(0.15, 0.04).setDepth(5);
         this.input.setDefaultCursor('none');
 
         //adiciona o placar e botão de reset
         this.gameControls.scoreText = this.add.text(larguraJogo / 50, alturaJogo / 50, 'Pontuação: 0', { fontSize: '32px', fill: '#fff' });
-        this.gameControls.resetOverBT = this.add.image(larguraJogo / 2 - 100, alturaJogo / 2 - 100, 'resetOverBT').setScale(.5).setOrigin(0, 0).setInteractive().setVisible(false);
-        this.gameControls.resetWinBT = this.add.image(larguraJogo / 2 - 100, alturaJogo / 2 - 100, 'resetWinBT').setScale(2.0).setOrigin(0, 0).setInteractive().setVisible(false);
+        this.gameControls.resetOverBT = this.add.image(larguraJogo / 2, alturaJogo / 2, 'resetOverBT').setScale(2.0).setInteractive().setVisible(false).setDepth(3);
+        this.gameControls.resetWinBT = this.add.image(larguraJogo / 2, alturaJogo / 2 + 300, 'resetWinBT').setScale(1.7).setInteractive().setVisible(false).setDepth(3);
 
         this.gameControls.resetOverBT.on('pointerdown', function () {
             this.gameControls.over = false;
@@ -118,7 +122,7 @@ class Quiz extends Phaser.Scene {
     // função chamada quando a resposta está errada
     wrongAnswer() {
         this.gameControls.over = true;
-        this.add.image(larguraJogo / 2, alturaJogo / 3, 'gameOver').setScale(.05);
+        //this.add.image(larguraJogo / 2, alturaJogo / 3, 'gameOver').setScale(.05);
         this.gameControls.resetOverBT.visible = true;
 
     }
@@ -127,9 +131,9 @@ class Quiz extends Phaser.Scene {
     rightAnswer() {
         this.gameControls.over = false;
         this.gameControls.win = true;
-        this.add.image(larguraJogo / 2, alturaJogo / 3, 'gameWin').setScale(.25);
+        //this.add.image(larguraJogo / 2, alturaJogo / 3, 'gameWin').setScale(.25);
         this.gameControls.resetWinBT.visible = true;
-        this.nextBT = this.add.image(larguraJogo / 4 + 80, alturaJogo / 3 + 30, 'nextBT').setScale(.5).setOrigin(0, 0).setInteractive().setVisible(true);
+        this.nextBT = this.add.image(larguraJogo / 2, alturaJogo / 2, 'nextBT').setScale(2).setInteractive().setVisible(true).setDepth(3);
         this.nextBT.on('pointerdown', () => this.scene.start('puzzle'));
     }
 }
