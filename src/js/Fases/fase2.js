@@ -61,7 +61,7 @@ class Fase2 extends Phaser.Scene {
         this.btnBack.setVisible(false);
 
         //cria e configura o botão de próxima cena.
-        this.btnNextScene = this.add.image(1700, 1067, 'next-scene-btn').setInteractive();
+        this.btnNextScene = this.add.image(1685, 1067, 'next-scene-btn').setInteractive();
         this.btnNextScene.setScale(1); // ajusta a escala conforme necessário.
         this.btnNextScene.on('pointerdown', this.nextScene.bind(this));
         this.btnNextScene.setVisible(false); // esconde o botão de próxima cena inicialmente.
@@ -69,10 +69,10 @@ class Fase2 extends Phaser.Scene {
         //criar a caixa de diálogo.
         var dialogBox = this.add.graphics();
         dialogBox.fillStyle(0x000000, 0.8);
-        dialogBox.fillRect(larguraJogo / 5, alturaJogo / 12, 1000, 150);
+        dialogBox.fillRect(larguraJogo / 5, 50, 1000, 150);
 
         //texto da caixa de diálogo.
-        var dialogText = this.add.text(400, 110, '', {
+        var dialogText = this.add.text(400, 50, '', {
             fontFamily: 'Arial',
             fontSize: '43px',
             fill: '#ffffff',
