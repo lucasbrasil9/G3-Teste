@@ -278,19 +278,16 @@
 <sub>Tabela 02 - Tabela trilha sonora </sub>
 </div>
 
-\# | titulo | ocorrência | autoria
---- | --- | --- | ---
-1 | trilha sonora de início | tela de início | 
-2 | trilha sonora animação do óculos| cena de colocar o óculos de realidade virtual | 
-3 | trilha sonora servidor, flash card, quiz | na fase 2, o jogador irá para uma sala com servidores onde ele terá que fazer quiz e ver flash cards | 
-4 | trilha sonora da criação de canais | na fase 3, o jogo irá mostrar a criação de canais dentro do Oracle Academy | 
-5 | trilha sonora da fase nuvem | na fase 4, o jogador vai estar na introdução ao cloud da Oracle | 
-6 | trilha sonora de tirar o óculos | cana de tirar o óculos de realidade virtual | 
-7 | trilha sonora das recompensas (medalhas) | cena do recebimento da recompensa (medalhas) | 
+\# | titulo | Autoria | Descrição | Ocorrencia |
+--- | --- | --- | --- | ---
+1 |  Sappheiros - Embrace | LIBERTY SOUNDS (uso livre) | Musica tranquila, sensação de relaxamento, calma e contunuidade | Musica de Fundo Principal, usada na maior parte do tempo em quase todas as telas |
+2 | Cyberpunk 2077| Infraction (uso livre) | Musica de ação, sensação de passagem de tempo, criação de espectativas | Uso para os minigames com tempo delimitado e/ou referente a missões |
+3 |  AERØHEAD - Lights Of Elysium |  LIBERTY SOUNDS (uso livre) | Musica tranquia, nostalgica, sentimento de gratidão, serenidade, fim de um ciclo | Uso para os créditos, fim do jogo e aba de conquistas|
 
 <div align="center">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
+
 
 &nbsp;&nbsp;&nbsp;&nbsp; Essa tabela foi dividida em três principais temas: titulo, ocorrência e autoria. No tema titulo, foi introduzido o motivo da trilha sonora. Em ocorrência foi adicionado a cena em que essa trilha sonora está introduzida e por último a autoria são os donos do direito da música. 
 
