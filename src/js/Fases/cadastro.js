@@ -12,7 +12,7 @@ class Cadastro extends Phaser.Scene {//construção de uma nova cena.
         this.load.html("form", "form/form.html");
         this.load.image("play", "assets/jogar.png");
         //this.load.image('telainicial', 'assets/telainicial.png');
-        this.load.image('sala2.2', 'assets/sala2.2.png');
+        //this.load.image('sala2.2', 'assets/sala2.2.png');
         this.load.image('flashcardV1', 'assets/flashcardV1.png');
         this.load.image('flash_card', 'assets/flashCard.png');
         this.load.spritesheet('slide', 'assets/fase2/cadastro-oracle.png', { frameWidth: 730, frameHeight: 590 });
