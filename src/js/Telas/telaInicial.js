@@ -60,13 +60,12 @@ class TelaInicial extends Phaser.Scene {
         this.input.setDefaultCursor('none');
 
         //botão volume.
-        soundButton = this.add.image(50, 310, 'volume-button-1').setScale(1.3);
+        soundButton = this.add.image(50, 300, 'volume-button-1').setScale(1.3);
         soundButton.setInteractive();
 
         //botão config.
         configButton = this.add.image(50, 120, 'config-button').setScale(1.3);
         configButton.setInteractive();
-        configButton.on('pointerdown', () => this.scene.start("menuConfig"));
 
 
         //botão start.
@@ -79,6 +78,7 @@ class TelaInicial extends Phaser.Scene {
         //botão menu.
         menuButton = this.add.image(50, 210, 'menu-button').setScale(1.3);
         menuButton.setInteractive();
+        menuButton.on('pointerdown', () => this.scene.start("menuConfig"));
 
         //mudar cor dos botões quando o mouse passar por cima.
         botaoHover(startButton, 'oculosoff', 'oculoson');
