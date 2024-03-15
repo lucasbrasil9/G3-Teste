@@ -24,21 +24,21 @@ class Fase2 extends Phaser.Scene {
         this.add.image(larguraJogo / 2, alturaJogo / 2, 'flash_card').setDepth(0).setScale(2);
 
         //Trocar cursor
-        this.mouse = this.add.image(480, 240, 'mouse').setScale(0.04).setOrigin(0.15, 0.04);
+        this.mouse = this.add.image(480, 240, 'mouse').setScale(0.04).setOrigin(0.15, 0.04).setDepth(5);
         this.input.setDefaultCursor('none');
 
         //cria e configura o botão de próxima imagem.
-        this.btnNext = this.add.image(1800, alturaJogo / 2, 'btn').setInteractive();
+        this.btnNext = this.add.image(1750, alturaJogo / 2, 'btn').setInteractive();
         this.btnNext.setScale(0.10); // ajusta a escala conforme necessário.
         this.btnNext.on('pointerdown', this.nextSlide.bind(this));
 
         //cria e configura o botão de voltar.
-        this.btnBack = this.add.image(120, alturaJogo / 2, 'btn-back').setInteractive();
+        this.btnBack = this.add.image(180, alturaJogo / 2, 'btn-back').setInteractive();
         this.btnBack.setScale(0.10); // ajusta a escala conforme necessário.
         this.btnBack.on('pointerdown', this.backButton.bind(this));
 
         //adiciona o carrossel ao centro da tela.
-        this.carrossel = this.add.sprite(larguraJogo / 2, alturaJogo / 2, 'slide').setScale(0.7);
+        this.carrossel = this.add.sprite(larguraJogo / 2, alturaJogo / 2, 'slide').setScale(1.5);
 
         //carrega a animação para o carrossel.
         let animacao = this.anims.create({
@@ -54,7 +54,7 @@ class Fase2 extends Phaser.Scene {
         this.btnBack.setVisible(false);
 
         //cria e configura o botão de próxima cena.
-        this.btnNextScene = this.add.image(1750, 1067, 'next-scene-btn').setInteractive();
+        this.btnNextScene = this.add.image(1700, 1067, 'next-scene-btn').setInteractive().setScale(15);
         this.btnNextScene.setScale(0.4); // ajusta a escala conforme necessário.
         this.btnNextScene.on('pointerdown', this.nextScene.bind(this));
         this.btnNextScene.setVisible(false); // esconde o botão de próxima cena inicialmente.
