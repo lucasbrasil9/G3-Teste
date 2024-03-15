@@ -12,7 +12,7 @@ class Fase2 extends Phaser.Scene {
 
     preload() {
         //carrega imagens e spritesheets.
-        this.load.image('flash_card', 'assets/flashCard.png');
+        this.load.image('white-background', 'assets/fundo branco.png');
         this.load.spritesheet('slide', 'assets/fase2/cadastro-oracle.png', { frameWidth: 730, frameHeight: 590 });
         this.load.image('btn', 'assets/fase2/arrowNext.png');
         this.load.image('btn-back', 'assets/fase2/arrowBack.png');
@@ -21,9 +21,12 @@ class Fase2 extends Phaser.Scene {
 
     create() {
         //adiciona uma imagem de fundo.
-        this.add.image(larguraJogo / 2, alturaJogo / 2, 'flash_card').setDepth(0).setScale(2);
+        this.add.image(larguraJogo / 2, alturaJogo / 2, 'white-background').setDepth(0).setScale(1.4);
 
-        //Trocar cursor
+        //adiciona a vision.
+        this.add.image(200, 250, 'vision1').setDepth(0).setScale(2);
+
+        //Trocar cursor.
         this.mouse = this.add.image(480, 240, 'mouse').setScale(0.04).setOrigin(0.15, 0.04).setDepth(5);
         this.input.setDefaultCursor('none');
 
@@ -54,10 +57,44 @@ class Fase2 extends Phaser.Scene {
         this.btnBack.setVisible(false);
 
         //cria e configura o botão de próxima cena.
-        this.btnNextScene = this.add.image(1700, 1067, 'next-scene-btn').setInteractive().setScale(15);
-        this.btnNextScene.setScale(0.4); // ajusta a escala conforme necessário.
+        this.btnNextScene = this.add.image(1700, 1067, 'next-scene-btn').setInteractive();
+        this.btnNextScene.setScale(1); // ajusta a escala conforme necessário.
         this.btnNextScene.on('pointerdown', this.nextScene.bind(this));
         this.btnNextScene.setVisible(false); // esconde o botão de próxima cena inicialmente.
+
+        //criar a caixa de diálogo.
+        var dialogBox = this.add.graphics();
+        dialogBox.fillStyle(0x000000, 0.8);
+        dialogBox.fillRect(larguraJogo / 5, alturaJogo / 12, 1000, 150);
+
+        //texto da caixa de diálogo.
+        var dialogText = this.add.text(400, 110, '', {
+            fontFamily: 'Arial',
+            fontSize: '43px',
+            fill: '#ffffff',
+            wordWrap: { width: 960 }
+        });
+
+        //texto a ser exibido gradualmente.
+        var fullText = "Olha que tela interessante! Aqui é a parte de cadastro do nosso site. Vou deixar você explorar e aprender, preste bastante atenção!"
+
+        var currentText = '';
+        var index = 0;
+        var speed = 50; //velocidade de digitação em milissegundos.
+
+        //função para animar o texto sendo digitado.
+        this.time.addEvent({
+            callback: function () {
+                if (index < fullText.length) {
+                    currentText += fullText[index];
+                    dialogText.setText(currentText);
+                    index++;
+                }
+            },
+            callbackScope: this,
+            loop: true,
+            delay: speed
+        });
     }
 
     update() {
