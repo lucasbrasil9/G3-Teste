@@ -17,6 +17,7 @@ class Fase2 extends Phaser.Scene {
         this.load.image('btn', 'assets/fase2/arrowNext.png');
         this.load.image('btn-back', 'assets/fase2/arrowBack.png');
         this.load.image('next-scene-btn', 'assets/Botão próximo.png');
+        this.load.image('progress-bar-2', 'assets/fase2/barra de Progresso 2.png');
     }
 
     create() {
@@ -25,6 +26,9 @@ class Fase2 extends Phaser.Scene {
 
         //adiciona a vision.
         this.add.image(200, 250, 'vision1').setDepth(0).setScale(2);
+
+        //barra de progresso.
+        this.add.image(1650, 1200, 'progress-bar-2').setScale(0.5).setDepth(0);
 
         //Trocar cursor.
         this.mouse = this.add.image(480, 240, 'mouse').setScale(0.04).setOrigin(0.15, 0.04).setDepth(5);
