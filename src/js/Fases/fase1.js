@@ -15,5 +15,16 @@ class Fase1 extends Phaser.Scene {
 
         botaoHover(this.invisibleServer, 'invisible_server', 'serverBT');
 
+        this.mouse = this.add.image(480, 240, 'mouse').setScale(0.04).setOrigin(0.15, 0.04);
+        this.input.setDefaultCursor('none');
+
     }
+
+    update() {
+        //configuração do cursor personalizado.
+        this.mouse.x = this.input.x;
+        this.mouse.y = this.input.y;
+
+    }
+    
 }
